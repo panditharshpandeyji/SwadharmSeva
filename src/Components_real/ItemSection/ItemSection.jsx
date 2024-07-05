@@ -8,7 +8,7 @@ function ItemSection() {
         alt="Hanuman chalisa image"
         className="w-[40%] rounded-full mt-3"
       />
-      <p className="text-orange-600 mt-3 text-xs">Hanuman Chalisa</p>
+      <p className="text-orange-600 mt-3 text-xs">Ram stuti</p>
     </div>
   );
 }
