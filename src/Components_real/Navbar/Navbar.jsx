@@ -9,11 +9,12 @@ import {
 } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Lordshiv from "../../Images/Logo/Lordshiv.jpg";
+import { Link } from "react-router-dom";
 const navigation = [
-  { name: "Home", href: "#" },
-  { name: "Subjects", href: "#" },
-  { name: "About Us", href: "#" },
-  { name: "Contact Us", href: "#" },
+  { name: "Home", href: "/" },
+  { name: "Subjects", href: "/subjects" },
+  { name: "About Us", href: "/about" },
+  { name: "Contact Us", href: "/contact" },
 ];
 
 function classNames(...classes) {
@@ -57,13 +58,13 @@ export default function Navbar() {
                     {navigation.map((item) => (
                       <a
                         key={item.name}
-                        href={item.href}
+                        // href={item.href}
                         className={classNames(
-                          "text-gray-300 hover:bg-gray-700 hover:text-white",
+                          "text-white hover:text-gray-300",
                           "rounded-md px-3 py-4 text-sm font-medium"
                         )}
                       >
-                        {item.name}
+                        <Link to={`${item.href}`}>{item.name}</Link>
                       </a>
                     ))}
                   </div>
